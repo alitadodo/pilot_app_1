@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- {{ edit_service }} -->
+    <form method="POST">
+        <label>Tên</label>
+        <input name="full_name" type="Text" value="{{edit_service.name}}">
+        <br>
+        <label>Tuổi</label>
+        <input name="age" type="Text" value="{{edit_service.age}}">
+        <br>
+        <label>Địa chỉ</label>
+        <input name="address" type="Text" value="{{edit_service.address}}">
+        <br>
+        <label>Giới tính</label>
+        <input name="gender" type="Text" value="{{edit_service.gender}}">
+        <br>
+        <label>Tình Trạng</label>
+        <input name="available" type="Text" value="{{edit_service.available}}">
+        <br>
+        <button>Xác nhận</button>
+        <input type="reset" value="reset">
+    </form>
+</body>
+</html>

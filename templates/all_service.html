@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% for service in services %}
+        <div>
+            {% if service.gender == "male" %}
+                <img src="../static/images/male.png"><br>
+            {% elif service.gender == "female" %}
+                <img src="../static/images/female.png"><br>
+            {% endif %}
+            <b>Tên:</b>{{ service.name }}<br>
+            <b>Tuổi:</b>{{ service.age }}<br>
+            <b>Giới tính:</b>{{ service.gender }}<br>
+            <b>Địa chỉ:</b>{{ service.address }}<br>
+            <b>Tình trạng:</b>{{ service.available }}
+            <a href="/all_service/detail/{{ service._id }}">Click to show informatin</a><br>
+            <a href="/delete/{{service._id}}">Delete</a>
+            
+        
+        </div>
+    <!-- {{ service }} -->
+    <hr>
+    {% endfor %}
+
+</body>
+</html>

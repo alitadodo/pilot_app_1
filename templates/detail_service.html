@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div>
+        {% if detail_services.gender == "male" %}
+            <img src="/static/images/male.png"><br>
+        {% elif detail_services.gender == "female" %}
+            <img src="/static/images/female.png"><br>
+        {% endif %}
+        <b>Tên:</b>{{ detail_services.name }}<br>
+        <b>Tuổi:</b>{{ detail_services.age }}<br>
+        <b>Giới tính:</b>{{ detail_services.gender }}<br>
+        <b>Địa chỉ:</b>{{ detail_services.address }}<br>
+        <b>Tình trạng:</b>{{ detail_services.available }}
+        <a href="/all_services/detail/{{ detail_services._id }}"></a><br>
+        <a href="/delete/{{detail_services._id}}">Delete</a>
+        <a href="/update/{{detail_services._id}}">Update</a>
+        
+    </div>
+</body>
+</html>
